@@ -46,14 +46,14 @@
   transition: 0.5s;
   /* border: 0.5px dashed rgba(255, 255, 255, 0.3); */
   position: relative;
-  padding: 50px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
 .what-noTouch:hover,
 .what-content-active {
   min-height: 67%;
-  padding: 40px 50px;
+  padding: 20px ;
 }
 
 .what-noTouch:hover ~ .what-content,

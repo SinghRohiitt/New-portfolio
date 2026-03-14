@@ -8,52 +8,49 @@ const Career = () => {
           My career <span>&</span>
           <br /> experience
         </h2>
+
         <div className="career-info">
           <div className="career-timeline">
             <div className="career-dot"></div>
           </div>
+
+          {/* Rent Duniya */}
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Full Stack Developer</h4>
-                <h5>Ikshan</h5>
+                <h5>Rent Duniya</h5>
               </div>
-              <h3>2020</h3>
+              <h3>2025</h3>
             </div>
             <p>
-              Built 6+ complete applications using React.js. Integrated backend
-              authentication using Node.js & MongoDB. Created responsive UI/UX
-              and designed wireframes using Figma.
+              Developed and maintained a real estate platform where users can
+              post and explore properties. Built scalable REST APIs using
+              Node.js and Express, integrated MongoDB database, and created
+              responsive UI using React.js and Tailwind CSS. Implemented
+              property filters, search functionality, authentication, and
+              dashboard features.
             </p>
           </div>
+
+          {/* PropCodes */}
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Senior Full Stack Developer</h4>
-                <h5>Monocept (Max Life Insurance)</h5>
+                <h4>MERN Stack Developer</h4>
+                <h5>PropCodes</h5>
               </div>
-              <h3>2021</h3>
+              <h3>2025</h3>
             </div>
             <p>
-              Led two development teams on Mpro, a large-scale insurance
-              operations platform. Developed multiple modules using React.js &
-              migrated critical functionalities to Node.js microservices.
+              Worked on full-stack development of real estate solutions using
+              the MERN stack. Designed backend APIs, handled property data
+              management, and optimized frontend performance with React.js.
+              Built features like property posting, advanced filters,
+              authentication, and user dashboards.
             </p>
           </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Logic Loop</h5>
-              </div>
-              <h3>NOW</h3>
-            </div>
-            <p>
-              Building Solid, a proprietary low-code platform using Angular,
-              Next.js & NestJS. Delivering production-ready CMS-based projects
-              including e-commerce, CRM, and import-export automation systems.
-            </p>
-          </div>
+
         </div>
       </div>
     </div>
