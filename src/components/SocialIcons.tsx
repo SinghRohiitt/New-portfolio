@@ -65,7 +65,10 @@ const SocialIcons = () => {
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com/in/rohit-singh-353356284/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/rohit-singh-353356284/"
+            target="_blank"
+          >
             <FaLinkedinIn />
           </a>
         </span>
@@ -80,7 +83,12 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#">
+      <a
+        className="resume-button"
+        href="https://drive.google.com/file/d/1Xnl_HZUQ5MFfG6oV0t19Zsezv_f9OSdO/view?usp=drive_link"
+        target="blank"
+        download
+      >
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />
