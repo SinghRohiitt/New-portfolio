@@ -5,7 +5,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import Loading from "../components/Loading";
+// import Loading from "../components/Loading";
 
 interface LoadingType {
   isLoading: boolean;
@@ -16,7 +16,7 @@ interface LoadingType {
 export const LoadingContext = createContext<LoadingType | null>(null);
 
 export const LoadingProvider = ({ children }: PropsWithChildren) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [loading, setLoading] = useState(0);
 
   const value = {
@@ -28,7 +28,7 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
 
   return (
     <LoadingContext.Provider value={value as LoadingType}>
-      {isLoading && <Loading percent={loading} />}
+      {/* {isLoading && <Loading percent={loading} />} */}
       <main className="main-body">{children}</main>
     </LoadingContext.Provider>
   );

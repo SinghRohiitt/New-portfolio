@@ -1,7 +1,12 @@
 import { PropsWithChildren } from "react";
 import "./styles/Landing.css";
-
+import { useEffect } from "react";
+import { initialFX } from "./utils/initialFX";
 const Landing = ({ children }: PropsWithChildren) => {
+  useEffect(() => {
+    document.body.style.overflowY = "auto";
+    initialFX();
+  }, []);
   return (
     <div className="landing-section" id="landingDiv">
       <div className="landing-container">
@@ -18,13 +23,11 @@ const Landing = ({ children }: PropsWithChildren) => {
           <h3>A Full Stack</h3>
 
           <h2 className="landing-info-h2">
-            <div className="landing-h2-1">Developer</div>
-            <div className="landing-h2-2">Engineer</div>
+            <span>Developer</span>
           </h2>
 
           <h2>
-            <div className="landing-h2-info">Engineer</div>
-            <div className="landing-h2-info-1">Developer</div>
+            <span>Engineer</span>
           </h2>
         </div>
       </div>
