@@ -37,10 +37,10 @@ const Scene = () => {
   useEffect(() => {
     if (!canvasDiv.current) return;
 
-    if (window.innerWidth < 768) {
-      console.warn("Mobile device detected - skipping 3D scene");
-      return;
-    }
+    // if (window.innerWidth < 768) {
+    //   console.warn("Mobile device detected - skipping 3D scene");
+    //   return;
+    // }
 
     if (!isWebGLAvailable()) {
       console.warn("WebGL not supported on this device.");
@@ -66,7 +66,9 @@ const Scene = () => {
     });
 
     renderer.setSize(container.width, container.height);
-    renderer.setPixelRatio(isLowEndDevice ? 1 : Math.min(window.devicePixelRatio, 1.5));
+    renderer.setPixelRatio(
+      isLowEndDevice ? 1 : Math.min(window.devicePixelRatio, 1.5),
+    );
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1;
 
@@ -82,7 +84,7 @@ const Scene = () => {
         event.preventDefault();
         console.warn("WebGL Context Lost");
       },
-      false
+      false,
     );
 
     renderer.domElement.addEventListener(
@@ -90,7 +92,7 @@ const Scene = () => {
       () => {
         console.warn("WebGL Context Restored");
       },
-      false
+      false,
     );
 
     /* ---------------- Camera ---------------- */
@@ -171,7 +173,7 @@ const Scene = () => {
 
       debounce = window.setTimeout(() => {
         element?.addEventListener("touchmove", (e: TouchEvent) =>
-          handleTouchMove(e, (x, y) => (mouse = { x, y }))
+          handleTouchMove(e, (x, y) => (mouse = { x, y })),
         );
       }, 200);
     };
@@ -200,7 +202,7 @@ const Scene = () => {
           mouse.y,
           interpolation.x,
           interpolation.y,
-          THREE.MathUtils.lerp
+          THREE.MathUtils.lerp,
         );
 
         light.setPointLight(screenLight);
