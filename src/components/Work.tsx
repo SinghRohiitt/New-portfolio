@@ -2,37 +2,39 @@ import { useState, useCallback } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Solid Starters",
-    category: "Low-Code Platform",
-    tools: "Angular, Next.js, NestJS, MongoDB",
-    image: "/images/Solidx.png",
+    title: "RentDuniya",
+    category: "Rental Property Platform",
+    tools:
+      "react.js, node.js, express.js, mongoDB, aws s3 ,docker, ci/cd, razorpay",
+    image: "/images/rentduniya.png",
   },
   {
-    title: "Radix",
-    category: "E-Commerce",
-    tools: "Angular, Next.js, NestJS, CMS",
-    image: "/images/radix.png",
+    title: "Procodes",
+    category: "Property directory",
+    tools: "react.js, node.js, express.js, mongoDB, aws s3 ,docker, ci/cd",
+    image: "/images/prop.png",
   },
   {
-    title: "Bond Cancellation",
-    category: "Import-Export Automation",
-    tools: "Angular, Next.js, NestJS, Workflows",
-    image: "/images/bond.png",
+    title: "Blogging Platform",
+    category: "Medium like Blogging Platform",
+    tools: "react.js, node.js, express.js, mongoDB",
+    image: "/images/blog.png",
   },
   {
-    title: "Sapphire",
-    category: "CRM Platform",
-    tools: "AngularJS, NestJS, PostgreSQL",
-    image: "/images/sapphire.png",
+    title: "Nike AIR",
+    category: "E-commerce Platform for nike products",
+    tools: "React.js, Node.js",
+    image: "/images/air.png",
   },
   {
-    title: "Mpro",
-    category: "Insurance Platform",
-    tools: "React.js, Node.js, Microservices",
-    image: "/images/Maxlife.png",
+    title: "Crypto Market Tracker",
+    category: "Crypto Market Tracker with real-time data",
+    tools: "React.js, Node.js, crypto APIs",
+    image: "/images/coin.png",
   },
 ];
 
@@ -70,7 +72,7 @@ const Work = () => {
         </h2>
 
         <div className="carousel-wrapper">
-          {/* Navigation Arrows */}
+          {/* Arrows */}
           <button
             className="carousel-arrow carousel-arrow-left"
             onClick={goToPrev}
@@ -79,6 +81,7 @@ const Work = () => {
           >
             <MdArrowBack />
           </button>
+
           <button
             className="carousel-arrow carousel-arrow-right"
             onClick={goToNext}
@@ -103,15 +106,19 @@ const Work = () => {
                       <div className="carousel-number">
                         <h3>0{index + 1}</h3>
                       </div>
+
                       <div className="carousel-details">
                         <h4>{project.title}</h4>
+
                         <p className="carousel-category">{project.category}</p>
+
                         <div className="carousel-tools">
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
                       </div>
                     </div>
+
                     <div className="carousel-image-wrapper">
                       <WorkImage image={project.image} alt={project.title} />
                     </div>
@@ -121,7 +128,7 @@ const Work = () => {
             </div>
           </div>
 
-          {/* Dot Indicators */}
+          {/* Dots */}
           <div className="carousel-dots">
             {projects.map((_, index) => (
               <button
@@ -134,6 +141,21 @@ const Work = () => {
                 data-cursor="disable"
               />
             ))}
+          </div>
+
+          {/* GitHub CTA */}
+          <div className="work-github">
+            <p>Want to explore more projects?</p>
+
+            <a
+              href="https://github.com/SinghRohiitt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-button"
+              data-cursor="disable"
+            >
+              <FaGithub /> View More on GitHub
+            </a>
           </div>
         </div>
       </div>

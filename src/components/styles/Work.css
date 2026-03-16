@@ -249,7 +249,37 @@
 .project-live-btn:hover {
   background: #1e40af;
 }
+/* ── GitHub CTA ── */
 
+.work-github {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.work-github p {
+  color: #9ca3af;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: 1px solid var(--accentColor);
+  color: var(--accentColor);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.github-button:hover {
+  background: var(--accentColor);
+  color: #0a0e17;
+  box-shadow: 0 0 20px rgba(94, 234, 212, 0.25);
+}
 /* ── Responsive ── */
 @media only screen and (max-width: 1600px) {
   .carousel-arrow-left {
