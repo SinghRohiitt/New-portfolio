@@ -1,6 +1,6 @@
 import {
   FaGithub,
-  FaInstagram,
+  // FaInstagram,
   FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
@@ -77,11 +77,11 @@ const SocialIcons = () => {
             <FaXTwitter />
           </a>
         </span>
-        <span>
+        {/* <span>
           <a href="https://www.instagram.com/rohit.sinngh/" target="_blank">
             <FaInstagram />
           </a>
-        </span>
+        </span> */}
       </div>
       <a
         className="resume-button"
